@@ -106,7 +106,7 @@ class _EntryPointState extends BaseState<MainAppBloc, EntryPoint>
                   themeMode:
                       AppColors.isLightTheme ? ThemeMode.light : ThemeMode.dark,
                   darkTheme: AppTheme.darkTheme,
-                  routerConfig: AppRouteConfig.router,
+                  routerConfig: router,
                   debugShowCheckedModeBanner: false,
                   supportedLocales:
                       AppConstants.localizationList.toLocaleList(),

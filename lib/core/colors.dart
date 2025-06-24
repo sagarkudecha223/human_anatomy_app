@@ -35,9 +35,22 @@ class AppColors {
   static const Color redBackground = Color(0xFFF8D7DA);
   static const Color redText = Color(0xFFC82333);
   static const Color greenBackground = Color(0xFFD4EDDA);
-  static const Color green = Color(0xFF28A745);
   static const Color blueBackground = Color(0xFFD1ECF1);
-  static const Color blueText = Color(0xFF17A2B8);
+
+  static Color get iconColor =>
+      isLightTheme ? AppColors.darkSurface : AppColors.lightSurface;
+
+  static Color get textColor =>
+      isLightTheme ? AppColors.lightTextHigh : AppColors.darkTextHigh;
+
+  static Color get boldTextColor =>
+      isLightTheme ? AppColors.lightTextDisabled : AppColors.darkTextDisabled;
+
+  static Color get borderColor =>
+      isLightTheme ? lightTextMedium : darkTextMedium;
+
+  static Color get shadowColor =>
+      isLightTheme ? lightTextMedium : darkTextMedium;
 }
 
 class ToothColors {
