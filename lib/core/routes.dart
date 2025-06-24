@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:go_router/go_router.dart';
 
 import '../ui/anatomy/anatomy_screen.dart';
@@ -21,7 +20,7 @@ final router = GoRouter(
   routes: [
     GoRoute(
       path: AppRoutes.homeScreen,
-      builder: (context, state) => _animation(const HomeScreen()),
+      builder: (context, state) => const HomeScreen(),
       routes: [
         GoRoute(
           path: AppRoutes.anatomyView,
@@ -31,9 +30,3 @@ final router = GoRouter(
     ),
   ],
 );
-
-_animation(Widget child) {
-  return Animate(
-    child: child,
-  ).moveY(begin: 40, end: 0, curve: Curves.easeOutCubic);
-}

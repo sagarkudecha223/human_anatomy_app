@@ -22,10 +22,7 @@ class HomeBloc extends BaseBloc<HomeEvent, HomeData> {
 
   void _initHomeEvent(_, __) {}
 
-  void _changeTheme(_, __) {
-    _themeService.changeThemeMode();
-    add(UpdateHomeState(state.rebuild((u) {})));
-  }
+  void _changeTheme(_, __) => _themeService.changeThemeMode();
 
   void _cardTapEvent(CardTapEvent event, __) => dispatchViewEvent(
     NavigateScreen(AppRoutes.anatomyView, data: event.anatomyViewEnum),
