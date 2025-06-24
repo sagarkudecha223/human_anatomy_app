@@ -301,7 +301,7 @@ class Dimens {
   //Toggle button
   static double get toggleButtonHeight => _adjust(30);
 
-  static double get toggleButtonWidth => _adjust(100);
+  static double get toggleButtonWidth => _adjust(50);
 
   //Bottom sheet height
   static double get bottomSheetXSmall => 0.3;
