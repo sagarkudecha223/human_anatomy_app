@@ -36,7 +36,8 @@ class _HomeScreenState extends BaseState<HomeBloc, HomeScreen> {
   void buildHandleActionEvent(NavigateScreen screen) {
     switch (screen.target) {
       case AppRoutes.anatomyView:
-        router.go(AppRoutes.homeToAnatomyView);
+        final data = screen.data as AnatomyViewEnum;
+        router.go('${AppRoutes.homeToAnatomyView}?view=${data.name}');
     }
   }
 
@@ -142,6 +143,7 @@ class _GridItemView extends StatelessWidget {
               child: AppSvgIcon(
                 anatomyViewEnum.icon,
                 height: Dimens.icon3xLarge,
+                color: AppColors.boldTextColor,
               ),
             ),
             Gap(Dimens.spaceSmall),
@@ -149,7 +151,6 @@ class _GridItemView extends StatelessWidget {
               anatomyViewEnum.title,
               style: AppFontTextStyles.textStyleBold().copyWith(
                 fontSize: Dimens.fontSizeEighteen,
-                color: AppColors.textColor,
               ),
             ),
           ],
