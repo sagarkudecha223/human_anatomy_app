@@ -10,8 +10,6 @@ final GlobalKey deleteButtonKey = GlobalKey();
 class AppConstants {
   static const OTHER_TEXT_MAX_LENGTH = 200;
   static const UPDATE_ANATOMY_LIST = 'UpdateAnatomyList';
-  static const UPDATE_TEETH_LIST = 'UpdateTeethList';
-  static const UPDATE_HEART_LIST = 'UpdateHeartList';
   static const ANATOMY = 'anatomy';
   static const TEETH_NUMBER_EIGHTEEN = '18';
   static const TEETH_NUMBER_THIRTY_FOUR = '34';
@@ -71,7 +69,5 @@ class AppConstants {
   static const TEETH_31 = 31;
   static const TEETH_32 = 32;
 
-  static final localizationList = [
-    EnglishLocalization(),
-  ];
+  static final localizationList = [EnglishLocalization()];
 }

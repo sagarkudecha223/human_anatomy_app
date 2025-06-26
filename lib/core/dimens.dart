@@ -1,13 +1,13 @@
 enum DeviceType { mobile, tablet, desktop }
 
 class Dimens {
-  static DeviceType _deviceType = DeviceType.mobile;
+  static DeviceType deviceType = DeviceType.mobile;
 
-  static void setDeviceType(DeviceType device) => _deviceType = device;
+  static void setDeviceType(DeviceType device) => deviceType = device;
 
   static double _adjust(double base) {
     double scale;
-    switch (_deviceType) {
+    switch (deviceType) {
       case DeviceType.desktop:
         scale = 2.0;
         break;

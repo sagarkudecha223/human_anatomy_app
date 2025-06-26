@@ -3,9 +3,13 @@ import 'package:flutter_base_architecture_plugin/imports/core_imports.dart';
 import 'package:flutter_base_architecture_plugin/imports/dart_package_imports.dart';
 import 'package:flutter_base_architecture_plugin/imports/injector_imports.dart';
 import '../base_arch_config/base_arch_config.dart';
+import '../bloc/anatomy/anatomy_bloc.dart';
 import '../bloc/home/home_bloc.dart';
 import '../bloc/main_app/main_app_bloc.dart';
+import '../bloc/treatment/anatomy_treatment_option_bloc.dart';
 import '../core/cache/preference_store.dart';
+import '../services/anatomy/anatomy_data.dart';
+import '../services/anatomy/anatomy_mock_data.dart';
 import '../services/theme_service/app_theme.dart';
 import '../services/theme_service/theme_service.dart';
 
@@ -40,17 +44,19 @@ abstract class Injector extends BaseInjector {
   void _registerMiscModules();
 
   /// Register Apis
-  // @Register.singleton(AnatomyMockData)
+  @Register.singleton(AnatomyMockData)
   void _registerApis();
 
   /// Register Services
   @Register.singleton(ThemeService)
-  // @Register.singleton(AnatomyDataService)
+  @Register.singleton(AnatomyDataService)
   @Register.singleton(BaseArchConfig)
   void _registerServices();
 
   /// Register Bloc dependencies
   @Register.factory(MainAppBloc)
   @Register.factory(HomeBloc)
+  @Register.factory(AnatomyBloc)
+  @Register.factory(AnatomyTreatmentOptionBloc)
   void _registerBlocProviders();
 }

@@ -1,42 +1,8 @@
-enum TextFieldSuffixIconType { cancel, showObscureText, hideObscureText }
-
 enum SharedPreferenceStore { IS_LIGHT_THEME_MODE }
 
 enum AppLoaderTheme { light, dark }
 
 enum AnatomyViewEnum { teeth, heart }
-
-enum TeethConditionsEnum {
-  caries,
-  partialErupted,
-  unErupted,
-  impactedVisible,
-  anomali,
-}
-
-enum TeethTreatmentEnum {
-  teethWhitening,
-  teethCleaning,
-  teethFillings,
-  teethExtraction,
-  crowns,
-}
-
-enum HeartConditionsEnum {
-  heartFailure,
-  heartRhythmDisorders,
-  heartValveDiseases,
-  cardiomyopathies,
-  vascularDiseases,
-}
-
-enum HeartTreatmentEnum {
-  coronaryArteryBypass,
-  valveRepair,
-  heartTransplant,
-  leftVentricularAssistDevice,
-  openHeartSurgery,
-}
 
 enum HeartAnatomyInfoEnum {
   superiorVenaCava,
